@@ -1,79 +1,115 @@
 package account;
 
-import java.util.Date;
 import service.BankOperation;
+
+import java.util.Date;
+
 /**
- * 
  * @author Tuan Hiep TRAN
- *
  */
 public class Transaction {
-	private Double currentBalance;
-	private Double nextBalance;
-	private Double value;
-	private Date date;
-	private BankOperation typeOperation;
+    private Double currentBalance;
+    private Double nextBalance;
+    private Double value;
+    private Date date;
+    private String time;
+    private BankOperation typeOperation;
+    private String destination;
+    private String comment;
 
-	public Transaction(Double current, Double value, Date date, BankOperation typeOperation) {
-		this.currentBalance = current;
-		this.value = value;
-		this.date = date;
-		this.typeOperation = typeOperation;
-	}
+    public Transaction(Double current, Double value, Date date, BankOperation typeOperation) {
+        this.currentBalance = current;
+        this.value = value;
+        this.date = date;
+        this.typeOperation = typeOperation;
+    }
 
-	public void operate() {
+    public Transaction(Double current, Double value, Date date, String time, BankOperation typeOperation, String destination, String comment) {
+        this.currentBalance = current;
+        this.value = value;
+        this.date = date;
+        this.time = time;
+        this.typeOperation = typeOperation;
+        this.destination = destination;
+        this.comment = comment;
+    }
 
-		switch (typeOperation) {
-		
-		case DEPOSIT:
-			this.nextBalance = currentBalance + value;
-			break;
-		case WITHDRAW:
-			this.nextBalance = currentBalance - value;
-			break;
-		default:
-            throw new AssertionError("Unknown operation ");
-		}
-	}
+    public void operate() {
 
-	public Double getValue() {
-		return value;
-	}
+        switch (typeOperation) {
 
-	public void setValue(Double value) {
-		this.value = value;
-	}
+            case CREDIT:
+                this.nextBalance = currentBalance + value;
+                break;
+            case DEBIT:
+                this.nextBalance = currentBalance - value;
+                break;
+            default:
+                throw new AssertionError("Unknown operation ");
+        }
+    }
 
-	public Date getDate() {
-		return date;
-	}
+    public Double getValue() {
+        return value;
+    }
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
+    public void setValue(Double value) {
+        this.value = value;
+    }
 
-	public BankOperation getTypeOperation() {
-		return typeOperation;
-	}
+    public Date getDate() {
+        return date;
+    }
 
-	public void setTypeOperation(BankOperation typeOperation) {
-		this.typeOperation = typeOperation;
-	}
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
-	public Double getCurrentBalance() {
-		return currentBalance;
-	}
+    public BankOperation getTypeOperation() {
+        return typeOperation;
+    }
 
-	public void setCurrentBalance(Double currentBalance) {
-		this.currentBalance = currentBalance;
-	}
+    public void setTypeOperation(BankOperation typeOperation) {
+        this.typeOperation = typeOperation;
+    }
 
-	public Double getNextBalance() {
-		return nextBalance;
-	}
+    public Double getCurrentBalance() {
+        return currentBalance;
+    }
 
-	public void setNextBalance(Double nextBalance) {
-		this.nextBalance = nextBalance;
-	}
+    public void setCurrentBalance(Double currentBalance) {
+        this.currentBalance = currentBalance;
+    }
 
+    public Double getNextBalance() {
+        return nextBalance;
+    }
+
+    public void setNextBalance(Double nextBalance) {
+        this.nextBalance = nextBalance;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

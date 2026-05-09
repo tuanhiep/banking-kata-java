@@ -1,0 +1,36 @@
+{
+  "transactions": [
+    {
+      "type": "debit",
+      "amount": 35.2,
+      "date": "2021-01-10",
+      "time": "7:30PM",
+      "to": "JohnDoe",
+      "comment": null
+    },
+    {
+      "type": "credit",
+      "amount": 28.56,
+      "date": "2021-01-11",
+      "time": "12:30PM",
+      "to": "JaneDoe",
+      "comment": "Thanks getting me out to a movie!"
+    },
+    {
+      "type": "debit",
+      "amount": 56.00,
+      "date": "2021-01-09",
+      "time": "3:30AM",
+      "to": "HydroUtility",
+      "comment": "Bill #1992837 for Dec 2020"
+    },
+    {
+      "type": "debit",
+      "amount": 2430.65,
+      "date": "2021-11-11",
+      "time": "12:30PM",
+      "to": "BuildMyComputer.com",
+      "comment": "Enjoy your new toy! Order #182827226"
+    }
+  ]
+}

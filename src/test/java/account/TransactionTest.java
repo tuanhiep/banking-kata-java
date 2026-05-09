@@ -14,16 +14,16 @@ public class TransactionTest {
 
 
 	@Test
-	public void should_return_nextBalance_52000_because_i_realize_the_DEPOSIT_2000_to_50000() {
-		Transaction transaction = new Transaction(50000.0,2000.0, new Date(), BankOperation.DEPOSIT);
+	public void should_return_nextBalance_52000_because_i_realize_the_CREDIT_2000_to_50000() {
+		Transaction transaction = new Transaction(50000.0,2000.0, new Date(), BankOperation.CREDIT);
 		transaction.operate();
 		assertEquals(50000.0, transaction.getCurrentBalance(), 0);
 		assertEquals(52000.0, transaction.getNextBalance(), 0);
 	}
 
 	@Test
-	public void should_return_nextBalance_48000_because_i_realize_the_WITHDRAW_2000_to_50000() {
-		Transaction transaction = new Transaction(50000.0,2000.0, new Date(), BankOperation.WITHDRAW);
+	public void should_return_nextBalance_48000_because_i_realize_the_DEBIT_2000_to_50000() {
+		Transaction transaction = new Transaction(50000.0,2000.0, new Date(), BankOperation.DEBIT);
 		transaction.operate();
 		assertEquals(50000.0, transaction.getCurrentBalance(), 0);
 		assertEquals(48000.0, transaction.getNextBalance(), 0);

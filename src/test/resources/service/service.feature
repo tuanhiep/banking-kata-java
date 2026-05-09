@@ -1,19 +1,19 @@
 Feature: Bank Account 
 
 Scenario: Deposit 1000 euros and Print the statement balance 
-	Given I deposit 1000 euros 
+	Given I credit 1000 euros
 	When I print the statement 
 	Then My balance should be 1000 
 	
 Scenario: Deposit and Withdraw and Print the statement balance 
-	Given I deposit 1000 euros 
-	And I deposit 2000 euros 
-	And I withdraw 500 euros 
+	Given I credit 1000 euros
+	And I credit 2000 euros
+	And I debit 500 euros
 	When I print the statement 
 	Then My balance should be 2500 
 	
-Scenario: I withdraw 1500 and Print the statement balance 
-	Given I withdraw 1500 euros 
+Scenario: I debit 1500 and Print the statement balance
+	Given I debit 1500 euros
 	When I print the statement 
 	Then My balance should be -1500 
     

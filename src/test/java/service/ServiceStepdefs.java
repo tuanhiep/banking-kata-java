@@ -20,23 +20,23 @@ public final class ServiceStepdefs {
     private Account account = new Account();
     
     /**
-     * i_deposit.
+     * i_credit.
      *
-     * @param deposit
+     * @param credit
      */
-    @Given("^I deposit (\\d+) euros$")
-    public void i_deposit(double credit) {
-        account.deposit(credit, new Date());
+    @Given("^I credit (\\d+) euros$")
+    public void i_credit(double credit) {
+        account.credit(credit, new Date());
     }
     
     /**
-     * i_withdraw.
+     * i_debit.
      *
-     * @param deposit
+     * @param credit
      */
-    @Given("^I withdraw (\\d+) euros$")
-    public void i_withdraw(double credit) {
-        account.withdraw(credit, new Date());
+    @Given("^I debit (\\d+) euros$")
+    public void i_debit(double credit) {
+        account.debit(credit, new Date());
     }
     
     /**
@@ -45,7 +45,7 @@ public final class ServiceStepdefs {
      */
     @When("^I print the statement$")
     public void i_print_the_statement() {
-        account.printStatement(System.out);
+        account.printBalanceHistory(System.out);
     }
     
     /**

@@ -1,6 +1,0 @@
-KATA BANK Total Balance 2500.0
-Operation History 
-Previous balance: 0.0        | 01/04/2018 | DEPOSIT 1000.0 | Balance 1000.0    
-Previous balance: 1000.0     | 02/04/2018 | DEPOSIT 2000.0 | Balance 3000.0    
-Previous balance: 3000.0     | 30/04/2018 | WITHDRAW 500.0 | Balance 2500.0    
-

@@ -1,4 +1,0 @@
-service\ServiceStepdefs.class
-service\ServiceTestBDD.class
-account\AccountTest.class
-account\TransactionTest.class

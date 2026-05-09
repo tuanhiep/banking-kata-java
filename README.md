@@ -1,24 +1,33 @@
-# KataBank
-This is project Java for Kata Bank using Maven, Cucumber for BDD , Junit for TDD 
+# Banking Kata Java
 
-KataBank permit to realize the scenarios :
+Java kata for practicing banking-domain behavior with BDD/TDD style tests.
 
-Feature: Bank Account 
+## Purpose
 
-Scenario: Deposit 1000 euros and Print the statement balance 
-	Given I deposit 1000 euros 
-	When I print the statement 
-	Then My balance should be 1000 
-	
-Scenario: Deposit and Withdraw and Print the statement balance 
-	Given I deposit 1000 euros 
-	And I deposit 2000 euros 
-	And I withdraw 500 euros 
-	When I print the statement 
-	Then My balance should be 2500 
-	
-Scenario: I withdraw 1500 and Print the statement balance 
-	Given I withdraw 1500 euros 
-	When I print the statement 
-	Then My balance should be -1500 
-    
+This repository is a learning kata. It is useful for practicing domain modeling, test-driven development, and behavior-driven scenarios in a small banking context.
+
+## Example Scenarios
+
+- Deposit money and print the account statement.
+- Deposit, withdraw, and verify the final balance.
+- Withdraw into a negative balance and verify the behavior.
+
+## How To Use
+
+Run the test suite from the IDE or command line.
+
+```bash
+mvn test
+```
+
+## Status
+
+Learning kata. The next upgrade is to clarify the domain rules, add example outputs, and modernize dependencies if this repo becomes active again.
+
+## Validation
+
+The core validation path is the behavior test suite. Add scenarios whenever a new business rule is introduced.
+
+## Engineering Notes
+
+The important engineering signal is not the framework choice; it is whether the domain language, examples, and tests make the banking rules unambiguous.
